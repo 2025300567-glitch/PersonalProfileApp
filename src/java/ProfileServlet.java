@@ -5,7 +5,6 @@
  */
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -34,24 +33,21 @@ public class ProfileServlet extends HttpServlet {
         
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
-        String studID = request.getParameter("stuID");
+        String stuID = request.getParameter("stuID");
         String program = request.getParameter("program");
         String email = request.getParameter("email");
         String hobbie = request.getParameter("hobbie");
         String selfIntro = request.getParameter("selfIntro");
         
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ProfileServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ProfileServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        request.setAttribute("fname", fname);
+        request.setAttribute("lname", lname);
+        request.setAttribute("stuID", stuID);
+        request.setAttribute("program", program);
+        request.setAttribute("email", email);
+        request.setAttribute("hobbie", hobbie);
+        request.setAttribute("selfIntro", selfIntro);
+        
+        request.getRequestDispatcher("display.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
