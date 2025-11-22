@@ -12,23 +12,23 @@ and open the template in the editor.
         <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
-        <h1>Personal Profile App</h1>
-        <form action="ProfileServlet" method="post">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname"><br>
-            <label for="stuID"> Student ID:</label><br>
-            <input type="text" id="stuID" name="stuID"><br>
-            <label for="program">Program:</label><br>
-            <input type="text" id="program" name="program"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="hobbie">Hobbies:</label><br>
-            <input type="text" id="hobbie" name="hobbie"><br>
-            <label for="selfIntro">Short Self-Introduction:</label><br>
-            <textarea id="selfIntro" name="selfIntro">Write something interesting about yourself.</textarea><br>
-            <input type="submit" value="Submit">
-        </form>
+        <div class="input-profile">
+            <form action="ProfileServlet" method="post">
+                <h1>Personal Profile App</h1>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="stuID"> Student ID:</label><br>
+                <input type="text" id="stuID" name="stuID"><br>
+                <label for="program">Program:</label><br>
+                <input type="text" id="program" name="program"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="hobbie">Hobbies:</label><br>
+                <input type="text" id="hobbie" name="hobbie"><br>
+                <label for="selfIntro">Short Self-Introduction:</label><br>
+                <textarea id="selfIntro" name="selfIntro">Write something interesting about yourself.</textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </body>
 </html>

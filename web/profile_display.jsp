@@ -13,13 +13,19 @@
         <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
-        <h1>Personal Profile View</h1>
-        <p>First name: ${fname}</p>
-        <p>Last name: ${lname}</p>
-        <p>Student ID: ${stuID}</p>
-        <p>Program: ${program}</p>
-        <p>Email: ${email}</p>
-        <p>Hobbies: ${hobbie}</p>
-        <p>Self Introduction: ${selfIntro}</p>
+        <div class="profile-container">
+            <div class="profile-name">
+                <h2 class="title">My Profile</h2>
+                <p><label>Name:</label> ${name}</p>
+                <p><label>Student ID:</label> ${stuID}</p>
+                <p><label>Email:</label> ${email}</p>
+            </div>
+            <div class="profile-about">
+                <h2 class="title">About Me</h2>
+                <p><label>Program:</label> ${program}</p>
+                <p><label>Hobbies:</label> ${hobbie}</p>
+                <p><label>Self Introduction:</label><br>${selfIntro}</p>
+            </div> 
+        </div>
     </body>
 </html>

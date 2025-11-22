@@ -31,16 +31,14 @@ public class ProfileServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        String fname = request.getParameter("fname");
-        String lname = request.getParameter("lname");
+        String name = request.getParameter("name");
         String stuID = request.getParameter("stuID");
         String program = request.getParameter("program");
         String email = request.getParameter("email");
         String hobbie = request.getParameter("hobbie");
         String selfIntro = request.getParameter("selfIntro");
         
-        request.setAttribute("fname", fname);
-        request.setAttribute("lname", lname);
+        request.setAttribute("name", name);
         request.setAttribute("stuID", stuID);
         request.setAttribute("program", program);
         request.setAttribute("email", email);

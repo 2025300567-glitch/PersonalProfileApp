@@ -1,4 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     font-family: Arial;
-    background: #2F4A87;
+    background: linear-gradient(135deg, #292f56, #008ba0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #f0f4f8;
+}
+
+.input-profile{
+    background: #2D7AA4;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+form{
+    background: #87C0DE;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+label{
+    font-weight: 600;
+    color: #003850;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #bcd9e5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+input[type=submit]{
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color: #BFCFD9;
+}
+
+p, label, input, textarea {
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+.profile-container{
+    background: #2D7AA4;
+    width: 100%;
+    max-width: 700px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    border-radius: 20px;
+    font-size: 1.15rem;
+}
+
+.profile-name{
+    background: #87C0DE;
+    width: 100%;
+    max-width: 700px;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    overflow-wrap: break-word;
+    transition: transform 0.3s;
+}
+
+.profile-about{
+    background: #87C0DE;
+    width: 100%;
+    max-width: 700px;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    overflow-wrap: break-word;
+    transition: transform 0.3s;
+}
+
+.profile-name:hover, .profile-about:hover {
+  transform: translateY(5px);
+}
+
+.input-profile, .profile-container{
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
 }
